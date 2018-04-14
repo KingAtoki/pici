@@ -67,24 +67,7 @@ const Header = props => (
 )
 
 export default class MainHeader extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = { width: 0, height: 0 }
-  }
-
-  componentWillMount() {
-    this.updateWindowDimensions()
-    window.addEventListener('resize', this.updateWindowDimensions)
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.updateWindowDimensions)
-  }
-
-  updateWindowDimensions = () => {
-    this.setState({ width: window.innerWidth, height: window.innerHeight })
-  }
   render() {
-    return <Header title={this.props.siteTitle} width={this.state.width} />
+    return <Header title={this.props.siteTitle} />
   }
 }
