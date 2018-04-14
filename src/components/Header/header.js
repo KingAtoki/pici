@@ -3,7 +3,7 @@ import Link from 'gatsby-link'
 
 import './header.less'
 
-import NavBar from '../Navbar/navbar.js'
+import NavBarMenu from '../Navbar/navbar'
 
 const Header = props => (
   <div
@@ -61,7 +61,7 @@ const Header = props => (
         alignItems: 'center',
       }}
     >
-      <NavBar />
+      <NavBarMenu />
     </div>
   </div>
 )

@@ -1,0 +1,38 @@
+.MenuBar {
+  display: none;
+  height: 100px;
+  width: 100px;
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  img {
+    margin: 0;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.ModalLink {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.ModalDonateButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 50px;
+  margin: 30px 0;
+  background: red;
+  &:hover {
+    cursor: pointer;
+  }
+}
