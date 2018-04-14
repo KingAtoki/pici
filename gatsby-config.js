@@ -14,6 +14,6 @@ module.exports = {
         queryName: `People_Helped`,
       },
     },
-    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-less`,
   ],
 }

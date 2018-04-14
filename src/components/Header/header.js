@@ -1,7 +1,9 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-import NavBar from './Navbar/navbar.js'
+import './header.less'
+
+import NavBar from '../Navbar/navbar.js'
 
 const Header = props => (
   <div
@@ -14,36 +16,42 @@ const Header = props => (
     }}
   >
     <div
+      className="LargeTitleHeader"
       style={{
         padding: '1.45rem 1.0875rem',
         width: '80rem',
       }}
     >
-      {props.width >= 600 ? (
-        <h1 style={{ margin: 0 }}>
-          <Link
-            to="/"
-            style={{
-              color: 'white',
-              textDecoration: 'none',
-            }}
-          >
-            {props.title}
-          </Link>
-        </h1>
-      ) : (
-        <h1 style={{ margin: 0 }}>
-          <Link
-            to="/"
-            style={{
-              color: 'white',
-              textDecoration: 'none',
-            }}
-          >
-            PICI
-          </Link>
-        </h1>
-      )}
+      <h1 style={{ margin: 0 }}>
+        <Link
+          to="/"
+          style={{
+            color: 'white',
+            textDecoration: 'none',
+          }}
+        >
+          {props.title}
+        </Link>
+      </h1>
+    </div>
+    <div
+      className="SmallTitleHeader"
+      style={{
+        padding: '1.45rem 1.0875rem',
+        width: '80rem',
+      }}
+    >
+      <h1 style={{ margin: 0 }}>
+        <Link
+          to="/"
+          style={{
+            color: 'white',
+            textDecoration: 'none',
+          }}
+        >
+          PICI
+        </Link>
+      </h1>
     </div>
 
     <div
