@@ -3,8 +3,6 @@ import Link from 'gatsby-link'
 
 import NavBar from './Navbar/navbar.js'
 
-import logo from '../../public/assets/pici-main-img-black.jpg'
-
 const Header = props => (
   <div
     style={{
