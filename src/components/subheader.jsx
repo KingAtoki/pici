@@ -33,30 +33,22 @@ export default class SubHeader extends React.Component {
     let backspace = false
     let textArr = texts
     changer = setInterval(
-      async () => {
+      () => {
         if (!this.state.running) clearInterval(changer)
         currentText = textArr[textIndex]
         currentLetter = currentText[letterIndex]
         if (backspace) {
           if (this.state.text.length) {
-            try {
-              await this.setState({
-                text: this.state.text.slice(0, this.state.text.length - 1),
-              })
-            } catch (err) {
-              clearInterval(changer)
-            }
+            this.setState({
+              text: this.state.text.slice(0, this.state.text.length - 1),
+            })
           } else {
             backspace = false
           }
         } else {
-          try {
-            await this.setState({
-              text: this.state.text.concat(currentLetter),
-            })
-          } catch (err) {
-            clearInterval(changer)
-          }
+          this.setState({
+            text: this.state.text.concat(currentLetter),
+          })
           letterIndex += 1
           if (
             this.state.text.includes('...') ||
