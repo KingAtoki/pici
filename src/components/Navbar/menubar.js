@@ -23,7 +23,12 @@ export default class MenuBar extends React.Component {
         <Modal
           show={this.state.show}
           onClose={this.toggleModal}
-          style={{ marginTop: '100px', background: 'white' }}
+          style={{
+            marginTop: '100px',
+            background: 'white',
+            transition: 'opacity 1s ease-in',
+          }}
+          containerClassName="ModalContainer"
           containerStyle={{
             background: 'blue', //will change later
             width: '100%',
