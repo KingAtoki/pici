@@ -26,11 +26,10 @@ export default class MenuBar extends React.Component {
           style={{
             marginTop: '100px',
             background: 'white',
-            transition: 'opacity 1s ease-in',
           }}
           containerClassName="ModalContainer"
           containerStyle={{
-            background: 'blue', //will change later
+            background: 'white', //will change later
             width: '100%',
             height: '70%',
             marginTop: 0,
@@ -58,7 +57,7 @@ export default class MenuBar extends React.Component {
             <Link
               to="/"
               style={{
-                color: 'white',
+                color: '#c9d6ff',
                 textDecoration: 'none',
                 fontSize: '30px',
               }}
@@ -70,12 +69,36 @@ export default class MenuBar extends React.Component {
             <Link
               to="/stories/"
               style={{
-                color: 'white',
+                color: '#c9d6ff',
                 textDecoration: 'none',
                 fontSize: '30px',
               }}
             >
               Success Stories
+            </Link>
+          </div>
+          <div className="ModalLink">
+            <Link
+              to="/pici-team"
+              style={{
+                color: '#c9d6ff',
+                textDecoration: 'none',
+                fontSize: '30px',
+              }}
+            >
+              Meet the Team
+            </Link>
+          </div>
+          <div className="ModalLink">
+            <Link
+              to="/about-us"
+              style={{
+                color: '#c9d6ff',
+                textDecoration: 'none',
+                fontSize: '30px',
+              }}
+            >
+              About Us
             </Link>
           </div>
         </Modal>

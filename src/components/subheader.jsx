@@ -40,7 +40,7 @@ export default class SubHeader extends React.Component {
         if (backspace) {
           if (this.state.text.length) {
             this.setState({
-              text: this.state.text.slice(0, this.state.text.length - 1),
+              text: this.state.text.slice(0, -1),
             })
           } else {
             backspace = false
@@ -69,7 +69,11 @@ export default class SubHeader extends React.Component {
   render() {
     return (
       <div>
-        <h1>{this.state.text}</h1>
+        {this.state.text ? (
+          <h1 style={{ color: 'grey' }}>{this.state.text}</h1>
+        ) : (
+          <h1 style={{ color: 'transparent' }}>Random text</h1>
+        )}
       </div>
     )
   }
